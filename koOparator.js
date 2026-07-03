@@ -1,19 +1,13 @@
-import { KOOP } from "./koop.js";
-import { NOOP } from "../NOOP/noop.js";
-import { POOK } from "../POOK/pook.js";
+import { ID_KOOP } from "../ID/IDkoop.js";
+import { ID_NEUTRAL } from "../ID/IDneutral.js";
+import { ID_POOK } from "../ID/IDpook.js";
 
-export function koOparator(respo){
-  if(respo === "RUN8" || respo === "TMP" || respo === "3hit90"){
-    return KOOP;
-  }
+export function IDselector(respo){
+  if(respo === "ANKER") return ID_NEUTRAL;
 
-  if(respo === "dir" || respo === "WpiR" || respo === "MXU"){
-    return NOOP;
-  }
+  if(["RUN8","TMP","3hit90"].includes(respo)) return ID_KOOP;
 
-  if(respo === "CLONE" || respo === "FAIL" || respo === "9vec3tor"){
-    return POOK;
-  }
+  if(["CLONE","FAIL","9vec3tor"].includes(respo)) return ID_POOK;
 
-  return NOOP;
+  return ID_NEUTRAL;
 }
