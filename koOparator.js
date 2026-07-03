@@ -1,3 +1,4 @@
+import { KOOP } from "./koop.js";
 import { ID_KOOP } from "../ID/IDkoop.js";
 import { ID_NEUTRAL } from "../ID/IDneutral.js";
 import { ID_POOK } from "../ID/IDpook.js";
