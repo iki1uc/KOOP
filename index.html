@@ -1,1 +1,16 @@
+<pre id="koop"></pre>
 
+<script type="module">
+  import { koOparator } from "./koOparator.js";
+
+  const RESPOS = ["RUN8","TMP","3hit90","dir","WpiR","MXU","CLONE","FAIL","9vec3tor"];
+
+  let out = "KOOP :: koOparator\n-------------------------\n";
+
+  RESPOS.forEach(r => {
+    const v = koOparator(r);
+    out += `${r.padEnd(10)} → ${v.mode} / ${v.behavior}\n`;
+  });
+
+  document.getElementById("koop").textContent = out;
+</script>
