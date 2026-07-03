@@ -1,4 +1,4 @@
-import { KOOP } from "../KOOP/koop.js";
+import { KOOP } from "./koop.js";
 import { NOOP } from "../NOOP/noop.js";
 import { POOK } from "../POOK/pook.js";
 
